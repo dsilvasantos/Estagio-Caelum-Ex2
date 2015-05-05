@@ -1,0 +1,4 @@
+﻿  Origem.c
+c:\users\diego\documents\visual studio 2013\projects\estágio- caelum\estágio- caelum\origem.c(35): warning C4013: 'nPrimo' indefinido; assumindo extern retornando int
+c:\users\diego\documents\visual studio 2013\projects\estágio- caelum\estágio- caelum\origem.c(67): warning C4244: '=' : conversão de 'double' para 'int', possível perda de dados
+  Estágio- Caelum.vcxproj -> C:\Users\Diego\Documents\Visual Studio 2013\Projects\Estágio- Caelum\Debug\Estágio- Caelum.exe
