@@ -78,7 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Origem.c" />
+    <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Entrada.txt" />

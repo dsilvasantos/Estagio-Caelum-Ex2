@@ -1,8 +1,9 @@
-#define _CRT_SECURE_NO_DEPRECATE
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include<math.h>
+
+
 
 void main()
 {
@@ -48,7 +49,7 @@ int nPrimo(int numero)
 {
 	// Esta função retorna 1 se o numero não for primo e 0 se o numero for primo
 
-	int n,i; 
+	int n, i;
 	int count = 0;
 
 	if (numero == 1)
