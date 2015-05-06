@@ -7,12 +7,12 @@
 #include<math.h>
 
 
-
 void main()
 {
 	FILE * entrada = fopen("Entrada.txt", "r");
 	char palavra[20];
 	int qtdeLetras;
+	int valorLetra;
 	int qtdeTotal = 0;
 	if (entrada == NULL)
 	{
@@ -25,7 +25,7 @@ void main()
 		for (int i = 0; i < qtdeLetras; i++)
 		{
 			// Contabilizando o valor total das palavras 
-			int valorLetra = palavra[i];
+			valorLetra = palavra[i];
 			if ((valorLetra >= 65) && (valorLetra <= 90))
 			{
 				valorLetra = valorLetra - 38;
@@ -44,11 +44,10 @@ void main()
 		{
 			printf("%s It is not a prime word \n", palavra);
 		}
+		valorLetra = 0;
 	}
-
 	// Fechamento do arquivo
 	fclose(entrada);
-
 }
 
 int nPrimo(int numero)

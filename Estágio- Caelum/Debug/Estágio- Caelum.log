@@ -1,4 +1,4 @@
 ﻿  main.c
-c:\users\diego\documents\github\estagio-caelum-ex2\estágio- caelum\main.c(39): warning C4013: 'nPrimo' indefinido; assumindo extern retornando int
-c:\users\diego\documents\github\estagio-caelum-ex2\estágio- caelum\main.c(72): warning C4244: '=' : conversão de 'double' para 'int', possível perda de dados
+c:\users\diego\documents\github\estagio-caelum-ex2\estágio- caelum\main.c(38): warning C4013: 'nPrimo' indefinido; assumindo extern retornando int
+c:\users\diego\documents\github\estagio-caelum-ex2\estágio- caelum\main.c(73): warning C4244: '=' : conversão de 'double' para 'int', possível perda de dados
   Estágio- Caelum.vcxproj -> C:\Users\Diego\Documents\GitHub\Estagio-Caelum-Ex2\Debug\Estágio- Caelum.exe
