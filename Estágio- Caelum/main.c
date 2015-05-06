@@ -44,7 +44,7 @@ void main()
 		{
 			printf("%s It is not a prime word \n", palavra);
 		}
-		valorLetra = 0;
+		qtdeTotal = 0;
 	}
 	// Fechamento do arquivo
 	fclose(entrada);
