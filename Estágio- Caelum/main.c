@@ -1,3 +1,6 @@
+#define _CRT_SECURE_NO_DEPRECATE
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -13,7 +16,7 @@ void main()
 	int qtdeTotal = 0;
 	if (entrada == NULL)
 	{
-		printf("ERRO NA LEITURA DO ARQUIVO\n");
+		printf("ERRO NA LEITURA DO ARQUIVO \n");
 		exit(1);
 	}
 	while (fscanf(entrada, "%s",&palavra) == 1)
@@ -41,8 +44,11 @@ void main()
 		{
 			printf("%s It is not a prime word \n", palavra);
 		}
-
 	}
+
+	// Fechamento do arquivo
+	fclose(entrada);
+
 }
 
 int nPrimo(int numero)
