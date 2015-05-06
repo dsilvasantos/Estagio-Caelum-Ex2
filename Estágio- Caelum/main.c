@@ -6,50 +6,6 @@
 #include<string.h>
 #include<math.h>
 
-
-void main()
-{
-	FILE * entrada = fopen("Entrada.txt", "r");
-	char palavra[20];
-	int qtdeLetras;
-	int valorLetra;
-	int qtdeTotal = 0;
-	if (entrada == NULL)
-	{
-		printf("ERRO NA LEITURA DO ARQUIVO \n");
-		exit(1);
-	}
-	while (fscanf(entrada, "%s",&palavra) == 1)
-	{
-		qtdeLetras = strlen(palavra);
-		for (int i = 0; i < qtdeLetras; i++)
-		{
-			// Contabilizando o valor total das palavras 
-			valorLetra = palavra[i];
-			if ((valorLetra >= 65) && (valorLetra <= 90))
-			{
-				valorLetra = valorLetra - 38;
-			}
-			else if ((valorLetra >= 97) && (valorLetra<=122))
-			{
-				valorLetra = valorLetra - 96;
-			}
-			qtdeTotal = qtdeTotal + valorLetra;
-		}
-		if (nPrimo(qtdeTotal) == 0)
-		{
-			printf("%s It is a prime word \n", palavra);
-		}
-		else
-		{
-			printf("%s It is not a prime word \n", palavra);
-		}
-		qtdeTotal = 0;
-	}
-	// Fechamento do arquivo
-	fclose(entrada);
-}
-
 int nPrimo(int numero)
 {
 	// Esta função retorna 1 se o numero não for primo e 0 se o numero for primo
@@ -80,4 +36,49 @@ int nPrimo(int numero)
 		}
 		return 0;
 	}
+}
+
+void main()
+{
+	FILE * entrada = fopen("Entrada.txt", "r");
+	char palavra[20];
+	int qtdeLetras;
+	int valorLetra;
+	int qtdeTotal = 0;
+	if (entrada == NULL)
+	{
+		printf("ERRO NA LEITURA DO ARQUIVO \n");
+		exit(1);
+	}
+	while (fscanf(entrada, "%s", &palavra) == 1)
+	{
+		qtdeLetras = strlen(palavra);
+		for (int i = 0; i < qtdeLetras; i++)
+		{
+			// Contabilizando o valor total das palavras 
+			valorLetra = palavra[i];
+			if ((valorLetra >= 65) && (valorLetra <= 90))
+			{
+				valorLetra = valorLetra - 38;
+			}
+			else if ((valorLetra >= 97) && (valorLetra <= 122))
+			{
+				valorLetra = valorLetra - 96;
+			}
+			qtdeTotal = qtdeTotal + valorLetra;
+		}
+		if (nPrimo(qtdeTotal) == 0)
+		{
+			printf("%s It is a prime word \n", palavra);
+		}
+		else
+		{
+			printf("%s It is not a prime word \n", palavra);
+		}
+
+		// Zerar o contador total
+		qtdeTotal = 0;
+	}
+	// Fechamento do arquivo
+	fclose(entrada);
 }
